@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Advance Search</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/59dee3affe.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><span class="google-brand ml-2"></span></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image.html">Images <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="small-txt" id="advance">
+      <div class="pl-5">
+        <h5 class="red-txt py-4">Advanced Search</h5>
+      </div>
+      <div class="line-break"></div>
+      <div class="pl-5">
+        <div class="row">
+          <div class="col-sm-7">
+            <h6>Find pages with...</h6>
+          </div>
+          <div class="col-sm-5">
+            <h6>To do this in the search box</h6>
+          </div>
+        </div>
+        <form action="https://www.google.com/search">
+          <div class="form-group row">
+            <label for="inputWords" class="col-sm-2 col-form-label">all these words:</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputWords" name="as_q" autofocus />
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Type the important words:
+                <span class="mono"> tricolor rat terrier</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPhrase" class="col-sm-2 col-form-label"
+              >this exact word or phrase:</label
+            >
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputPhrase" name="as_epq" />
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Put exact words in quotes:
+                <span class="mono"> "rat terrier"</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputAny" class="col-sm-2 col-form-label">any of these words:</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputAny" name="as_oq" />
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Type OR between all the words you want:
+                <span class="mono"> miniature OR standard</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputNone" class="col-sm-2 col-form-label">none of these words</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputNone" name="as_eq" />
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Put a minus sign just before words you don't want:
+                <span class="mono"> -rodent, -"Jack Russell"</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputNumber" class="col-sm-2 col-form-label">numbers ranging from:</label>
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="inputMin" name="as_nlo" />
+                </div>
+                <div class="col-sm-2 text-center">to</div>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="inputMax" name="as_nhi" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Put 2 periods between the numbers and add a unit of measure:
+                <span class="mono"> 10..35 lb, $300..$500, 2010..2011</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="line-break"></div>
+
+          <div class="row">
+            <h6>Then narrow your results by...</h6>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPhrase" class="col-sm-2 col-form-label">language:</label>
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="inputLanguage"
+                name="lr"
+              >
+                <option value="">any language</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Find pages in the language you select.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputRegion" class="col-sm-2 col-form-label">region:</label>
+            <div class="col-sm-5">
+              <select class="form-control form-control-sm custom-select" id="inputRegion" name="cr">
+                <option value="">any region</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Find pages published in a particular region.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputUpdate" class="col-sm-2 col-form-label">last update:</label>
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="lastUpdate"
+                name="as_qdr"
+              >
+                <option value="all">anytime</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Find pages updated within the time you specify.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputSite" class="col-sm-2 col-form-label">site or domain:</label>
+            <div class="col-sm-5">
+              <input
+                type="text"
+                id="inputSide"
+                class="form-control"
+                name="as_sitesearch"
+                value=""
+              />
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Search one site (like <span class="mono">wikipedia.org </span>) or limit your
+                results to a domain like <span class="mono">.edu</span>,
+                <span class="mono">.org</span> or .<span class="mono">gov</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputTerm" class="col-sm-2 col-form-label">terms appearing:</label>
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="inputTerm"
+                name="as_occt"
+              >
+                <option value="any">anywhere in the page</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Search for terms in the whole page, page title, or web address, or links to the page
+                you're looking for.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputSafeSearch" class="col-sm-2 col-form-label"
+              ><a href="https://support.google.com/websearch?p=adv_safesearch&hl=en"
+                >SafeSearch:</a
+              ></label
+            >
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="inputSafeSearch"
+                name="safe"
+              >
+                <option value="images">Show most relevant resultst</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Tell
+                <a href="https://support.google.com/websearch?p=adv_safesearch&hl=en">SafeSearch</a>
+                whether to filter sexually explicit content.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputFileType" class="col-sm-2 col-form-label">file type:</label>
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="inputFileType"
+                name="as_filetype"
+              >
+                <option value="">any format</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Find pages in the format you prefer.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputUsageRights" class="col-sm-2 col-form-label"
+              ><a href="https://support.google.com/websearch?p=ws_images_usagerights&hl=en"
+                >usage rights:</a
+              ></label
+            >
+            <div class="col-sm-5">
+              <select
+                class="form-control form-control-sm custom-select"
+                id="inputUsageRights"
+                name="tbs"
+              >
+                <option value="">not filtered by license</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <div class="description">
+                Find pages you are free to use yourself.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-7">
+              <button type="submit" class="btn btn-primary float-right">Advanced Search</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="line-break"></div>
+
+        <h6>You can also...</h6>
+
+        <ul>
+          <li>
+            <a href="https://support.google.com/websearch?p=adv_pages_similar&hl=en"
+              >Find pages that are similar to a URL</a
+            >
+          </li>
+          <li>
+            <a href="https://support.google.com/websearch?p=adv_pages_visited&hl=en"
+              >Search pages you;ve visited</a
+            >
+          </li>
+          <li>
+            <a href="https://support.google.com/websearch?p=adv_operators&hl=en"
+              >Use operators in the search box</a
+            >
+          </li>
+          <li>
+            <a href="https://www.google.com/preferences?hl=en">Customize your search settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
